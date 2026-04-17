@@ -15,7 +15,6 @@ body {
 h1 {
     font-size: 3rem;
     color: #d81b60;
-    text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -44,3 +43,4 @@ p:hover {
     transition: all 0.3s ease;
     box-shadow: 0 15px 30px rgba(216, 27, 96, 0.2);
 }
+
