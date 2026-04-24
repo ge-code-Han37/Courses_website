@@ -1,46 +1,203 @@
-body {
-    background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #4a4a4a;
-    text-align: center;
 }
 
-
-h1 {
-    font-size: 3rem;
-    color: #d81b60;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-
-p {
-    background: white;
-    padding: 20px 40px;
-    border-radius: 50px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    font-size: 1.2rem;
+body {
+    background-color: #f9f9f9;
+    color: #333;
     line-height: 1.6;
-    max-width: 80%;
-    border: 1px solid #f8bbd0;
 }
 
-strong {
-    color: #e91e63;
-    font-size: 1.4rem;
-    position: relative;
+a {
+    text-decoration: none; /* شيل الخط اللي تحت اللينكات */
+    color: inherit;
 }
 
-p:hover {
-    transform: translateY(-5px);
-    transition: all 0.3s ease;
-    box-shadow: 0 15px 30px rgba(216, 27, 96, 0.2);
+ul {
+    list-style: none; /* شيل النقط اللي جنب القوائم */
 }
 
+header {
+    background-color: #fff;
+    padding: 15px 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex; /* السحر اللي بيخليهم جنب بعض */
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px; /* مسافة بين كلمات المنيو */
+}
+
+nav ul li a:hover {
+    color: #2ecc71; /* لون أخضر خفيف لما تلمسي الكلمة */
+}
+
+.auth-buttons button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.auth-buttons button:last-child {
+    background-color: #1a73e8;
+    color: white;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    background: linear-gradient(to right, #ffffff, #e3f2fd);
+}
+
+.hero-content {
+    flex: 1; /* ياخد نص المساحة */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.hero-image img {
+    border-radius: 20px;
+    box-shadow: 20px 20px 0px #1a73e8; /* حركة شياكة ورا الصورة */
+}
+
+.main-btn {
+    background-color: #0d47a1;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* --- Popular Courses Section --- */
+.courses {
+    padding: 60px 10%;
+    text-align: center; /* سنتر العنوان الرئيسي */
+}
+
+.courses h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #0d47a1;
+}
+
+.course-grid {
+    display: grid; /* نظام الشبكة */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* يخليهم 3 في الصف ولو الشاشة صغرت يبقوا 2 أو 1 */
+    gap: 30px; /* مسافات بين الكروت */
+}
+
+.course-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease; /* حركة ناعمة لما نقف عليه */
+    border: 1px solid #eee;
+}
+
+.course-card:hover {
+    transform: translateY(-10px); /* الكارت يترفع لفوق لما تلمسيه */
+    border-color: #1a73e8;
+}
+
+.course-card img {
+    width: 100%; /* الصورة تاخد عرض الكارت كله */
+    height: 180px;
+    object-fit: cover; /* يمنع تمطيط الصورة */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.course-card h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.course-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.course-card button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* --- Footer Section --- */
+footer {
+    background-color: #0d47a1;
+    color: white;
+    padding: 50px 10% 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* عشان لو الشاشة صغرت ينزلوا تحت بعض */
+    gap: 40px;
+}
+
+.footer-col h3, .footer-col h4 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
