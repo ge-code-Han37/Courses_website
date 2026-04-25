@@ -12,12 +12,12 @@ body {
 }
 
 a {
-    text-decoration: none; /* شيل الخط اللي تحت اللينكات */
+    text-decoration: none; 
     color: inherit;
 }
 
 ul {
-    list-style: none; /* شيل النقط اللي جنب القوائم */
+    list-style: none; 
 }
 
 header {
@@ -30,18 +30,18 @@ header {
 }
 
 nav {
-    display: flex; /* السحر اللي بيخليهم جنب بعض */
+    display: flex; 
     justify-content: space-between;
     align-items: center;
 }
 
 nav ul {
     display: flex;
-    gap: 30px; /* مسافة بين كلمات المنيو */
+    gap: 30px; 
 }
 
 nav ul li a:hover {
-    color: #2ecc71; /* لون أخضر خفيف لما تلمسي الكلمة */
+    color: #1a73e8;
 }
 
 .auth-buttons button {
