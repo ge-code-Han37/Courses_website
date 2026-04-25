@@ -1,3 +1,4 @@
+/* -- General Styles -- */
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,7 @@ body {
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 a {
@@ -20,24 +22,38 @@ ul {
     list-style: none; 
 }
 
+/* -- Header & Navigation --*/
 header {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 15px 5%;
+    backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 nav {
     display: flex; 
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 nav ul {
     display: flex;
-    gap: 30px; 
+    gap: 25px; 
+}
+
+header ul li a {
+    text-decoration: none; 
+    color: #444; 
+    font-weight: 500; 
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
@@ -46,7 +62,7 @@ nav ul li a:hover {
 
 .auth-buttons button {
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 12px;
     cursor: pointer;
     border: none;
     font-weight: bold;
@@ -54,7 +70,7 @@ nav ul li a:hover {
 }
 
 .auth-buttons button:last-child {
-    background-color: #1a73e8;
+    background-color: #0d47a1;
     color: white;
 }
 
@@ -67,18 +83,18 @@ nav ul li a:hover {
 }
 
 .hero-content {
-    flex: 1; /* ياخد نص المساحة */
+    flex: 1; 
 }
 
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #0d47a1;
 }
 
 .hero-image img {
     border-radius: 20px;
-    box-shadow: 20px 20px 0px #1a73e8; /* حركة شياكة ورا الصورة */
+    box-shadow: 20px 20px 0px #0d47a1; 
 }
 
 .main-btn {
@@ -95,7 +111,7 @@ nav ul li a:hover {
 /* --- Popular Courses Section --- */
 .courses {
     padding: 60px 10%;
-    text-align: center; /* سنتر العنوان الرئيسي */
+    text-align: center; 
 }
 
 .courses h2 {
@@ -105,9 +121,9 @@ nav ul li a:hover {
 }
 
 .course-grid {
-    display: grid; /* نظام الشبكة */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* يخليهم 3 في الصف ولو الشاشة صغرت يبقوا 2 أو 1 */
-    gap: 30px; /* مسافات بين الكروت */
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px; 
 }
 
 .course-card {
@@ -115,19 +131,19 @@ nav ul li a:hover {
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease; /* حركة ناعمة لما نقف عليه */
+    transition: transform 0.3s ease; 
     border: 1px solid #eee;
 }
 
 .course-card:hover {
-    transform: translateY(-10px); /* الكارت يترفع لفوق لما تلمسيه */
+    transform: translateY(-10px); 
     border-color: #1a73e8;
 }
 
 .course-card img {
-    width: 100%; /* الصورة تاخد عرض الكارت كله */
+    width: 100%; 
     height: 180px;
-    object-fit: cover; /* يمنع تمطيط الصورة */
+    object-fit: cover; 
     border-radius: 10px;
     margin-bottom: 15px;
 }
@@ -164,8 +180,10 @@ footer {
 .footer-container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* عشان لو الشاشة صغرت ينزلوا تحت بعض */
+    flex-wrap: wrap; 
+    align-items: flex-start;
     gap: 40px;
+    
 }
 
 .footer-col h3, .footer-col h4 {
@@ -201,79 +219,8 @@ footer {
     padding-top: 20px;
     border-top: 1px solid rgba(255,255,255,0.1);
 }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
-body {
-    background: #f0f4f8;
-    color: #333;
-    overflow-x: hidden;
-}
-
-
-header {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    padding: 15px 5%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-header nav { width: 100%; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-}
-
-.logo { 
-    display: flex; 
-    align-items: center; 
-    gap: 10px; 
-    font-weight: bold; 
-    color: #0d47a1; 
-}
-.logo img { 
-    height: 40px; 
-    border-radius: 50%; 
-}
-
-header ul { 
-    display: flex; 
-    list-style: none; 
-    gap: 25px; 
-}
-header ul li a {
-     text-decoration: none; 
-     color: #444; 
-     font-weight: 500; 
-     transition: 0.3s;
-     }
-header ul li a:hover { 
-    color: #0d47a1; 
-}
-
-.auth-buttons button {
-    padding: 8px 20px;
-    border-radius: 12px;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-    margin-left: 10px;
-}
-.auth-buttons button:last-child { 
-    background: #0d47a1; 
-    color: white; 
-}
-
+/* --- Contact Section --- */
 .contact-section {
     padding: 100px 10%;
     text-align: center;
@@ -333,7 +280,6 @@ input, textarea {
     outline: none;
 }
 
-
 button[type="submit"] {
     margin-top: 20px;
     padding: 15px 40px;
@@ -351,53 +297,4 @@ button[type="submit"] {
 button[type="submit"]:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(30, 60, 114, 0.3);
-}
-
-footer {
-    background-color: #0d47a1 !important; 
-    padding: 60px 10% !important; 
-    color: white !important;
-}
-
-.footer-container {
-    display: flex !important;
-    flex-direction: row !important; 
-    justify-content: space-between !important; 
-    align-items: flex-start !important;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-brand h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
-}
-
-.footer-links h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-
-.footer-links a {
-    color: rgba(255, 255, 255, 0.8) !important;
-    text-decoration: none;
-    font-size: 15px;
-    transition: 0.3s;
-}
-
-.footer-links a:hover {
-    color: #ffffff !important;
-    padding-left: 5px; 
-}
-
-.social-icons a {
-    color: white !important;
-    font-size: 20px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.social-icons a:hover {
-    transform: scale(1.2); 
 }
